@@ -1,0 +1,31 @@
+id_producto,categoria,subcategoria,precio_base,costo_base
+PROD-100,Moda,Ropa Deportiva,57,12
+PROD-101,Moda,Ropa Deportiva,67,19
+PROD-102,Electrónica,Laptops,843,563
+PROD-103,Electrónica,Smartphones,469,272
+PROD-104,Moda,Calzado,97,26
+PROD-105,Electrónica,Smartphones,440,276
+PROD-106,Electrónica,Laptops,867,559
+PROD-107,Electrónica,Smartphones,470,276
+PROD-108,Moda,Ropa Deportiva,84,25
+PROD-109,Electrónica,Laptops,863,558
+PROD-110,Hogar,Muebles,205,124
+PROD-111,Electrónica,Laptops,862,550
+PROD-112,Hogar,Muebles,214,106
+PROD-113,Hogar,Muebles,211,102
+PROD-114,Hogar,Electrodomésticos,301,181
+PROD-115,Hogar,Muebles,243,108
+PROD-116,Electrónica,Smartphones,464,287
+PROD-117,Electrónica,Smartphones,459,272
+PROD-118,Moda,Calzado,88,45
+PROD-119,Moda,Calzado,93,43
+PROD-120,Electrónica,Laptops,839,541
+PROD-121,Moda,Ropa Deportiva,64,36
+PROD-122,Hogar,Muebles,210,107
+PROD-123,Electrónica,Smartphones,459,278
+PROD-124,Hogar,Electrodomésticos,335,181
+PROD-125,Electrónica,Laptops,858,551
+PROD-126,Electrónica,Laptops,852,562
+PROD-127,Moda,Ropa Deportiva,54,31
+PROD-128,Moda,Ropa Deportiva,60,29
+PROD-129,Moda,Ropa Deportiva,65,17

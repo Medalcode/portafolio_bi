@@ -1,0 +1,151 @@
+id_cliente,segmento,region,antiguedad_años
+CLI-1000,Pequeña Empresa,Este,3
+CLI-1001,Consumidor Final,Oeste,2
+CLI-1002,Consumidor Final,Sur,1
+CLI-1003,Corporativo,Norte,3
+CLI-1004,Pequeña Empresa,Sur,1
+CLI-1005,Corporativo,Oeste,6
+CLI-1006,Pequeña Empresa,Centro,6
+CLI-1007,Pequeña Empresa,Este,6
+CLI-1008,Pequeña Empresa,Centro,3
+CLI-1009,Corporativo,Centro,6
+CLI-1010,Consumidor Final,Oeste,3
+CLI-1011,Consumidor Final,Oeste,4
+CLI-1012,Consumidor Final,Este,3
+CLI-1013,Corporativo,Centro,5
+CLI-1014,Pequeña Empresa,Norte,1
+CLI-1015,Corporativo,Centro,6
+CLI-1016,Corporativo,Este,5
+CLI-1017,Corporativo,Este,4
+CLI-1018,Consumidor Final,Este,5
+CLI-1019,Pequeña Empresa,Oeste,1
+CLI-1020,Consumidor Final,Norte,6
+CLI-1021,Consumidor Final,Sur,6
+CLI-1022,Pequeña Empresa,Norte,3
+CLI-1023,Pequeña Empresa,Centro,4
+CLI-1024,Corporativo,Sur,5
+CLI-1025,Corporativo,Oeste,1
+CLI-1026,Consumidor Final,Sur,6
+CLI-1027,Consumidor Final,Oeste,2
+CLI-1028,Corporativo,Sur,2
+CLI-1029,Consumidor Final,Oeste,1
+CLI-1030,Consumidor Final,Sur,4
+CLI-1031,Corporativo,Norte,3
+CLI-1032,Pequeña Empresa,Centro,1
+CLI-1033,Corporativo,Oeste,1
+CLI-1034,Corporativo,Este,1
+CLI-1035,Consumidor Final,Centro,2
+CLI-1036,Consumidor Final,Este,5
+CLI-1037,Corporativo,Sur,5
+CLI-1038,Consumidor Final,Este,2
+CLI-1039,Consumidor Final,Centro,6
+CLI-1040,Pequeña Empresa,Este,6
+CLI-1041,Consumidor Final,Sur,4
+CLI-1042,Consumidor Final,Este,1
+CLI-1043,Corporativo,Centro,1
+CLI-1044,Pequeña Empresa,Norte,5
+CLI-1045,Consumidor Final,Centro,5
+CLI-1046,Corporativo,Norte,1
+CLI-1047,Consumidor Final,Norte,2
+CLI-1048,Corporativo,Norte,3
+CLI-1049,Corporativo,Oeste,2
+CLI-1050,Pequeña Empresa,Este,2
+CLI-1051,Consumidor Final,Centro,6
+CLI-1052,Consumidor Final,Oeste,4
+CLI-1053,Corporativo,Este,4
+CLI-1054,Corporativo,Norte,1
+CLI-1055,Consumidor Final,Este,3
+CLI-1056,Pequeña Empresa,Este,4
+CLI-1057,Consumidor Final,Norte,6
+CLI-1058,Consumidor Final,Norte,1
+CLI-1059,Pequeña Empresa,Sur,1
+CLI-1060,Corporativo,Centro,2
+CLI-1061,Consumidor Final,Este,2
+CLI-1062,Pequeña Empresa,Centro,3
+CLI-1063,Pequeña Empresa,Centro,1
+CLI-1064,Pequeña Empresa,Oeste,1
+CLI-1065,Corporativo,Oeste,1
+CLI-1066,Corporativo,Centro,2
+CLI-1067,Pequeña Empresa,Este,4
+CLI-1068,Corporativo,Este,1
+CLI-1069,Corporativo,Este,1
+CLI-1070,Pequeña Empresa,Sur,4
+CLI-1071,Pequeña Empresa,Este,6
+CLI-1072,Consumidor Final,Oeste,6
+CLI-1073,Consumidor Final,Este,2
+CLI-1074,Corporativo,Sur,2
+CLI-1075,Corporativo,Oeste,6
+CLI-1076,Consumidor Final,Norte,6
+CLI-1077,Pequeña Empresa,Norte,1
+CLI-1078,Consumidor Final,Este,5
+CLI-1079,Consumidor Final,Centro,1
+CLI-1080,Consumidor Final,Norte,2
+CLI-1081,Corporativo,Oeste,1
+CLI-1082,Consumidor Final,Centro,4
+CLI-1083,Corporativo,Oeste,2
+CLI-1084,Consumidor Final,Oeste,1
+CLI-1085,Consumidor Final,Norte,4
+CLI-1086,Consumidor Final,Oeste,5
+CLI-1087,Consumidor Final,Sur,3
+CLI-1088,Corporativo,Sur,2
+CLI-1089,Pequeña Empresa,Este,2
+CLI-1090,Consumidor Final,Sur,4
+CLI-1091,Pequeña Empresa,Norte,1
+CLI-1092,Pequeña Empresa,Oeste,5
+CLI-1093,Corporativo,Norte,5
+CLI-1094,Corporativo,Oeste,3
+CLI-1095,Corporativo,Sur,1
+CLI-1096,Corporativo,Sur,3
+CLI-1097,Corporativo,Este,5
+CLI-1098,Consumidor Final,Sur,5
+CLI-1099,Consumidor Final,Oeste,1
+CLI-1100,Consumidor Final,Oeste,3
+CLI-1101,Consumidor Final,Norte,2
+CLI-1102,Pequeña Empresa,Norte,1
+CLI-1103,Consumidor Final,Oeste,2
+CLI-1104,Pequeña Empresa,Sur,5
+CLI-1105,Corporativo,Sur,2
+CLI-1106,Consumidor Final,Sur,5
+CLI-1107,Pequeña Empresa,Sur,1
+CLI-1108,Corporativo,Este,3
+CLI-1109,Corporativo,Norte,3
+CLI-1110,Corporativo,Sur,2
+CLI-1111,Consumidor Final,Este,5
+CLI-1112,Consumidor Final,Este,5
+CLI-1113,Corporativo,Norte,1
+CLI-1114,Consumidor Final,Centro,5
+CLI-1115,Corporativo,Sur,5
+CLI-1116,Consumidor Final,Centro,4
+CLI-1117,Corporativo,Norte,3
+CLI-1118,Pequeña Empresa,Norte,3
+CLI-1119,Corporativo,Centro,6
+CLI-1120,Corporativo,Sur,5
+CLI-1121,Pequeña Empresa,Oeste,6
+CLI-1122,Corporativo,Centro,2
+CLI-1123,Corporativo,Este,1
+CLI-1124,Corporativo,Sur,4
+CLI-1125,Consumidor Final,Centro,3
+CLI-1126,Corporativo,Norte,4
+CLI-1127,Corporativo,Este,2
+CLI-1128,Corporativo,Este,3
+CLI-1129,Pequeña Empresa,Centro,2
+CLI-1130,Corporativo,Centro,4
+CLI-1131,Pequeña Empresa,Sur,1
+CLI-1132,Pequeña Empresa,Sur,6
+CLI-1133,Consumidor Final,Este,6
+CLI-1134,Consumidor Final,Sur,1
+CLI-1135,Corporativo,Sur,2
+CLI-1136,Consumidor Final,Sur,1
+CLI-1137,Corporativo,Oeste,4
+CLI-1138,Pequeña Empresa,Sur,4
+CLI-1139,Consumidor Final,Oeste,1
+CLI-1140,Pequeña Empresa,Oeste,2
+CLI-1141,Pequeña Empresa,Norte,6
+CLI-1142,Pequeña Empresa,Norte,5
+CLI-1143,Consumidor Final,Centro,3
+CLI-1144,Pequeña Empresa,Norte,6
+CLI-1145,Pequeña Empresa,Oeste,3
+CLI-1146,Consumidor Final,Norte,6
+CLI-1147,Pequeña Empresa,Oeste,3
+CLI-1148,Consumidor Final,Este,3
+CLI-1149,Pequeña Empresa,Sur,5

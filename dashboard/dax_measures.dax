@@ -1,0 +1,155 @@
+// =============================================================================
+// PROYECTO BI: ANÁLISIS LOGÍSTICO Y OPERATIVO DE ENVÍOS (POWER BI DAX METRICS)
+// Tabla de Medidas Recomendada: _Medidas_KPIs
+// Autor: Jonatthan Medalla
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// 1. CUMPLIMIENTO DE ENTREGAS & NIVEL DE SERVICIO (OTDR SLA)
+// -----------------------------------------------------------------------------
+
+// Total de pedidos procesados en el sistema
+Pedidos Totales = 
+COUNTROWS(Fact_Envios)
+
+// Pedidos finalizados con estado entregado
+Pedidos Entregados = 
+CALCULATE(
+    COUNTROWS(Fact_Envios),
+    Fact_Envios[estado_envio] = "Entregado"
+)
+
+// Pedidos entregados a tiempo según fecha de compromiso SLA
+Pedidos A Tiempo = 
+CALCULATE(
+    [Pedidos Entregados],
+    Fact_Envios[indicador_cumplimiento] = "A Tiempo"
+)
+
+// Pedidos entregados fuera de la fecha límite
+Pedidos Atrasados = 
+CALCULATE(
+    [Pedidos Entregados],
+    Fact_Envios[indicador_cumplimiento] = "Atrasado"
+)
+
+// On-Time Delivery Rate % (KPI Clave de Desempeño Logístico)
+OTDR % = 
+DIVIDE(
+    [Pedidos A Tiempo],
+    [Pedidos Entregados],
+    0
+)
+
+// Tasa de Cancelación de Pedidos %
+Tasa Cancelacion % = 
+VAR _Cancelados = CALCULATE(COUNTROWS(Fact_Envios), Fact_Envios[estado_envio] = "Cancelado")
+RETURN DIVIDE(_Cancelados, [Pedidos Totales], 0)
+
+
+// -----------------------------------------------------------------------------
+// 2. MÉTRICAS FINANCIERAS Y RENTABILIDAD OPERATIVA
+// -----------------------------------------------------------------------------
+
+// Ventas Brutas Totales
+Ventas Totales = 
+SUM(Fact_Envios[monto_venta])
+
+// Costo de Producto acumulado
+Costo Productos = 
+SUM(Fact_Envios[costo_producto])
+
+// Costo de Envíos / Fletes totales
+Costo Logistico = 
+SUM(Fact_Envios[costo_envio])
+
+// Margen Operativo Neto (Ingresos - Costo Producto - Costo Envío)
+Margen Operativo = 
+SUM(Fact_Envios[margen_operativo_pedido])
+
+// Margen Operativo % respecto a las ventas totales
+Margen Operativo % = 
+DIVIDE(
+    [Margen Operativo],
+    [Ventas Totales],
+    0
+)
+
+// Ticket Promedio de Venta por Pedido
+Ticket Promedio = 
+DIVIDE(
+    [Ventas Totales],
+    [Pedidos Totales],
+    0
+)
+
+
+// -----------------------------------------------------------------------------
+// 3. ANÁLISIS DE INTELIGENCIA TEMPORAL (TIME INTELLIGENCE)
+// -----------------------------------------------------------------------------
+
+// Ventas Mismo Periodo del Año Anterior (Same Period Last Year)
+Ventas SPLY = 
+CALCULATE(
+    [Ventas Totales],
+    SAMEPERIODLASTYEAR(Dim_Calendario[fecha])
+)
+
+// Variación Interanual de Ventas (Year-over-Year %)
+Ventas YoY % = 
+VAR _VentasActuales = [Ventas Totales]
+VAR _VentasAnteriores = [Ventas SPLY]
+RETURN 
+DIVIDE(
+    _VentasActuales - _VentasAnteriores,
+    _VentasAnteriores,
+    0
+)
+
+// OTDR Mismo Periodo Año Anterior
+OTDR SPLY % = 
+CALCULATE(
+    [OTDR %],
+    SAMEPERIODLASTYEAR(Dim_Calendario[fecha])
+)
+
+// Variación Porcentual de OTDR YoY
+OTDR YoY % = 
+[OTDR %] - [OTDR SPLY %]
+
+// Ventas Acumuladas Año a la Fecha (Year-To-Date)
+Ventas YTD = 
+TOTALYTD(
+    [Ventas Totales],
+    Dim_Calendario[fecha]
+)
+
+// Margen Operativo Acumulado Año a la Fecha (Year-To-Date)
+Margen YTD = 
+TOTALYTD(
+    [Margen Operativo],
+    Dim_Calendario[fecha]
+)
+
+
+// -----------------------------------------------------------------------------
+// 4. TIEMPOS DE CICLO Y LEAD TIMES OPERATIVOS
+// -----------------------------------------------------------------------------
+
+// Tiempo Promedio Real de Tránsito (Días desde pedido hasta entrega)
+Promedio Dias Entrega = 
+AVERAGE(Fact_Envios[dias_transcurridos_reales])
+
+// Tiempo Promedio Prometido al Cliente (SLA)
+Promedio Dias SLA Prometidos = 
+AVERAGE(Fact_Envios[dias_prometidos])
+
+// Desviación Promedio en Pedidos Atrasados (Días de retraso respecto a la promesa)
+Dias Retraso Promedio = 
+CALCULATE(
+    AVERAGEX(
+        Fact_Envios,
+        INT(Fact_Envios[dias_transcurridos_reales] - Fact_Envios[dias_prometidos])
+    ),
+    Fact_Envios[indicador_cumplimiento] = "Atrasado"
+)
